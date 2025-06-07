@@ -1,4 +1,4 @@
 warp.exe
-*.py
 *.cpp
 
+env/
