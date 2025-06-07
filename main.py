@@ -10,14 +10,14 @@ with open("url.txt","r") as r:
 os.system("warp-cli.exe connect")
 
 def f():
-    while True:
+    # while True:
         try:
             res = requests.get(URL)
-            print(res)
+            print(res.text)
         except Exception as e:
             print(e)
 
-fsc = [threading.Thread(target=f,args=()) for i in range(100) ]
+fsc = [threading.Thread(target=f,args=()) for i in range(1) ]
 
 for i in fsc:
     i.start()
